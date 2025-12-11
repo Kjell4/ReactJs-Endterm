@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import { AuthProvider } from "./AuthContext";
+import Favorites from "./pages/Favorites";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/items" element={<SomethingList />} />
             <Route path="/items/:id" element={<SomethingDetails />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/favorites" element={<Favorites />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/profile" element={<Profile />} />
           </Routes>
