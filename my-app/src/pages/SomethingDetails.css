@@ -1,0 +1,66 @@
+/* Контейнер */
+.details-section {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Кнопка Back */
+.details-back-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+
+  background-color: #6f66d8;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.details-back-btn:hover {
+  background-color: #6f66d8;
+}
+
+/* Заголовок */
+.details-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Картинка персонажа */
+.details-image {
+  width: 250px;
+  height: auto;
+  border-radius: 16px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Информация */
+.details-info {
+  text-align: left;
+  margin: 20px auto;
+  width: 75%;
+  font-size: 17px;
+  color: #444;
+}
+
+.details-info p {
+  margin: 10px 0;
+}
+
+.details-info b {
+  color: #222;
+}
