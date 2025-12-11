@@ -10,7 +10,6 @@ export default function RootLayout({ children }) {
       <nav className="navbar">
         <div className="nav-left">
           <Link to="/" className="nav-link">Home</Link>
-          <Link to="/about" className="nav-link">About</Link>
           <Link to="/items" className="nav-link">Characters</Link>
         </div>
 
