@@ -1,11 +1,19 @@
 const BASE_URL = "https://rickandmortyapi.com/api/character";
 
-export async function getAll(name = "") {
-  const url = name ? `${BASE_URL}/?name=${name}` : BASE_URL;
+export async function getAll({ name = "", page = 1 }) {
+  const url = `${BASE_URL}/?page=${page}${name ? `&name=${name}` : ""}`;
   const res = await fetch(url);
-  if (!res.ok) throw new Error("Failed to fetch characters");
+
+  if (!res.ok) {
+    // API возвращает 404, если персонажей нет
+    return { results: [], totalPages: 1 };
+  }
+
   const data = await res.json();
-  return data.results;
+  return {
+    results: data.results,
+    totalPages: data.info.pages,
+  };
 }
 
 export async function getById(id) {
