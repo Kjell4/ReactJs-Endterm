@@ -21,3 +21,6 @@ export async function getById(id) {
   if (!res.ok) throw new Error("Character not found");
   return res.json();
 }
+
+
+//Will add some changes
