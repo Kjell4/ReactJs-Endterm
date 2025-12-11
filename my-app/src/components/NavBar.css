@@ -1,0 +1,82 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #ffffff;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #444;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+/* Buttons */
+
+.nav-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #888;
+  background: #f8f8f8;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #eaeaea;
+}
+
+.nav-btn.primary {
+  background: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.nav-btn.primary:hover {
+  background: #0067d6;
+}
+
+.nav-btn.danger {
+  background: #ff4d4d;
+  border-color: #ff4d4d;
+  color: white;
+}
+
+.nav-btn.danger:hover {
+  background: #e44444;
+}
+
+/* Page content */
+.main-content {
+  padding: 20px;
+}
+
