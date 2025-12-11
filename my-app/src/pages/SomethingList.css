@@ -1,0 +1,22 @@
+.something-list-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.something-list-input {
+  padding: 8px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.something-list-button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.something-list-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
