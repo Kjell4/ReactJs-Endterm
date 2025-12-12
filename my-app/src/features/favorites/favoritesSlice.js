@@ -38,8 +38,4 @@ export const syncFavoritesOnLogin = () => async (dispatch) => {
   dispatch(loadMerged(merged));
 };
 
-<<<<<<< HEAD
 export default favoritesSlice.reducer;
-=======
-export default favoritesSlice.reducer;
->>>>>>> 050baeacb83dc6bf839195b1372424d2f8a92a41
