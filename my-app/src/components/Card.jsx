@@ -27,4 +27,8 @@ export default function Card({ item }) {
       </button>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 050baeacb83dc6bf839195b1372424d2f8a92a41

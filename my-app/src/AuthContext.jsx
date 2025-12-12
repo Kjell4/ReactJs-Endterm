@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "./firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
+// импортируем Redux
 import { useDispatch } from "react-redux";
 import { syncFavoritesOnLogin } from "./features/favorites/favoritesSlice";
 
@@ -19,6 +20,7 @@ export function AuthProvider({ children }) {
       setLoading(false);
 
       if (currentUser) {
+        // ← МОМЕНТ СИНХРОНИЗАЦИИ FAVORITES
         dispatch(syncFavoritesOnLogin());
       }
     });

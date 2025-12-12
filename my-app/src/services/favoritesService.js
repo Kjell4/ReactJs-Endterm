@@ -11,6 +11,7 @@ import {
 
 const LS_KEY = "favorites";
 
+// ---- LOCAL STORAGE ----
 
 export function getLocalFavorites() {
   return JSON.parse(localStorage.getItem(LS_KEY)) || [];
@@ -20,6 +21,7 @@ export function saveLocalFavorites(list) {
   localStorage.setItem(LS_KEY, JSON.stringify(list));
 }
 
+// ---- FIREBASE FAVORITES ----
 
 export async function getServerFavorites() {
   const user = auth.currentUser;
