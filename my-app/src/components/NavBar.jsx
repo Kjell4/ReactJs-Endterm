@@ -12,8 +12,8 @@ export default function RootLayout({ children }) {
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/items" className="nav-link">Characters</Link>
 
-          {/* Ссылка Favorites видна только авторизованному пользователю */}
-          {user && <Link to="/favorites" className="nav-link">Favorites</Link>}
+      
+          <Link to="/favorites" className="nav-link">Favorites</Link>
         </div>
 
         <div className="nav-right">
