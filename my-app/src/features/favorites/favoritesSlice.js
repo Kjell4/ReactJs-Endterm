@@ -3,6 +3,7 @@ import {
   getFavorites,
   addFavorite,
   removeFavorite,
+  mergeFavoritesOnLogin,
 } from "../../services/favoritesService";
 
 const initialState = {
@@ -15,7 +16,7 @@ const favoritesSlice = createSlice({
   reducers: {
     toggleFavorite(state, action) {
       const item = action.payload;
-      const exists = state.favorites.find(f => f.id === item.id);
+      const exists = state.favorites.find((f) => f.id === item.id);
 
       if (exists) {
         state.favorites = removeFavorite(item.id);
@@ -23,8 +24,18 @@ const favoritesSlice = createSlice({
         state.favorites = addFavorite(item);
       }
     },
+
+    loadMerged(state, action) {
+      state.favorites = action.payload;
+    },
   },
 });
 
-export const { toggleFavorite } = favoritesSlice.actions;
+export const { toggleFavorite, loadMerged } = favoritesSlice.actions;
+
+export const syncFavoritesOnLogin = () => async (dispatch) => {
+  const merged = await mergeFavoritesOnLogin();
+  dispatch(loadMerged(merged));
+};
+
 export default favoritesSlice.reducer;
